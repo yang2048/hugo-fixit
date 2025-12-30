@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>Feeds of 李瑞豪 tagged as 博客邻居 from Inoreader [https://www.inoreader.com]</title>
+  </head>
+  <body>
+    <outline text="博客邻居" title="博客邻居">
+      <outline text="Andreo Y." title="Andreo Y." type="rss" xmlUrl="https://andreoy.cn/index.xml" htmlUrl="https://andreoy.cn/"/>
+      <outline text="AnFrank's Blog" title="AnFrank's Blog" type="rss" xmlUrl="https://enfangzhong.github.io/atom.xml" htmlUrl="http://enfangzhong.github.io/"/>
+      <outline text="Ayou's Blog" title="Ayou's Blog" type="rss" xmlUrl="https://ayou10031.com/index.xml" htmlUrl="https://ayou10031.com/"/>
+      <outline text="菠菜眾長" title="菠菜眾長" type="rss" xmlUrl="https://lruihao.cn/index.xml" htmlUrl="https://lruihao.cn/"/>
+      <outline text="辣椒の酱" title="辣椒の酱" type="rss" xmlUrl="https://removeif.github.io/atom.xml" htmlUrl="https://removeif.github.io/"/>
+    </outline>
+  </body>
+</opml>

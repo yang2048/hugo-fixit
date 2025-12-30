@@ -3,9 +3,10 @@ build/
 public/
 resources/
 content/private/
-notePad/*
-!notePad/about/
+notePad/.obsidian/
+notePad/private/
 
 .hugo_build.lock
 _vendor
 jsconfig.json
+notePad/_remotely-secure-metadata-on-remote.json

@@ -4,6 +4,7 @@ subtitle:
 date: 2025-09-07T21:00:48+08:00
 comment: true
 lightgallery: false
+hiddenFromHomePage: true
 ---
 
 <!-- markdownlint-disable-file -->

@@ -5,12 +5,11 @@
 // ==============================
 // https://fonts.zeoseven.com/
 @import url("https://static.zeoseven.com/zsft/447/main/result.css");
-$code-font-family:
-    Cascadia Code,
-    $code-font-family;
+$code-font-family: Cascadia Code, $code-font-family;
 
-@import url("https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css");
-$global-font-family: "LXGW Bright", $global-font-family;
+@import url("https://fontsapi.zeoseven.com/292/main/result.css");
+// @import url("https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css");
+$global-font-family: "LXGW WenKai", $global-font-family;
 $global-font-size: 17px;
 
 @import url("https://static.zeoseven.com/zsft/253/main/result.css");
