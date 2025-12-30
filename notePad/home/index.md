@@ -1,12 +1,17 @@
 ---
 title: 薅羊毛
-subtitle:
-date: 2025-12-29T13:09:21+08:00
+subtitle: 不定期发布最新福利
+date: 2025-12-30T13:09:21+08:00
+comment: false
 ---
 
 {{< admonition abstract >}}
 长期发布优惠活动，羊毛党的福音
 {{< /admonition >}}
+
+## 主站
+{{< link href="https://yyovo.com" content="👉 ecosystem" card=true card-icon="fa-solid fa-blog" class="" >}}
+{{< link href="https://xdev.cc" content="👉 ecosystem" card=true card-icon="fa-solid fa-blog" class="" >}}
 
 ## 导航
 {{< link href="https://h5.gantanhao.com/kmDg" content="🔥🔥大额流量·电话卡领取" card-icon="fas fa-bullhorn" card=true >}} 
@@ -17,8 +22,7 @@ date: 2025-12-29T13:09:21+08:00
 {{< link href="http://xingfan.vip/K98bqG" content="🧧🧧美团外卖红包" card-icon="fas fa-hamburger" card=true >}} 
 {{< link href="http://xingfan.vip/5Fieih" content="🧧🧧美团闪购红包" card-icon="fas fa-gift" card=true >}} 
 {{< link href="https://u.jd.com/AOBJ3Of" content="🧧🧧京东外卖红包" card-icon="" card=true >}} 
-{{< link href="http://xingfan.vip/3LcSSr" content="🛻🛻滴滴打车红包" card-icon="" card=true >}} 
-{{< link href="https://xdev.cc" content="👉 ecosystem" card=true card-icon="fa-solid fa-blog" class="" >}} 
+{{< link href="http://xingfan.vip/3LcSSr" content="🛻🛻滴滴打车红包" card-icon="" card=true >}}
 </div>
 
 ## 推广

@@ -3,16 +3,16 @@
 # See: https://fixit.lruihao.cn/documentation/basics/#menu-configuration
 # -------------------------------------------------------------------------------------
 [[main]]
-  identifier = "home"
+  identifier = "/"
   parent = ""
-  pre = ""
+  pre = "🏠"
   post = ""
-  name = "主页"
-  url = "/home/"
+  name = "首页"
+  url = "/"
   title = ""
   weight = 1
   [main.params]
-    icon = "fa-solid fa-home"
+  #  icon = "fa-solid fa-home"
 [[main]]
   identifier = "archives"
   parent = ""
@@ -62,7 +62,7 @@
   parent = ""
   pre = ""
   post = ""
-  name = "我的作品"
+  name = "作品"
   url = "/projects/"
   title = ""
   weight = 5
@@ -89,6 +89,14 @@
   weight = 1
   [main.params]
     icon = "fa-solid fa-compass"
+[[main]]
+  identifier = "home"
+  pre = "🎁"
+  post = ""
+  name = "推广"
+  url = "/home/"
+  title = ""
+  weight = 8
 [[main]]
   identifier = "about"
   pre = ""
