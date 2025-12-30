@@ -1,2 +1,9 @@
-name = "blog"
-compatibility_date = "2025-12-30"
+name = 'hugo-fixit'
+compatibility_date = "2025-07-31"
+
+[build]
+command = "hugo --gc --minify --logLevel info"
+
+[assets]
+directory = "./public"
+not_found_handling = "404-page"
