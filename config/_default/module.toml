@@ -3,6 +3,9 @@
 # See: https://gohugo.io/configuration/module/
 # -------------------------------------------------------------------------------------
 
+[[imports]]
+  path = "github.com/hugo-fixit/fixit-bundle"
+
 [hugoVersion]
-extended = true
-min = "0.147.7"
+  extended = true
+  min = "0.147.7"

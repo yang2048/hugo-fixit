@@ -2,3 +2,150 @@
 // Custom style
 // 自定义样式
 // ==============================
+
+//顶部菜单背景模糊
+header {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    [data-theme="dark"] & {
+        background-color: rgba(37, 45, 56, 0.5);
+    }
+    -webkit-box-shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 5px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+// 封面图尺寸适应
+.home.posts .summary {
+    /* background-color: #fdfdfd; */
+    border-radius: 10px;
+    margin: 20px 0px;
+    padding: 10px 20px;
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    [data-theme="dark"] & {
+        background-color: #282a36;
+    }
+}
+.home.posts .summary:not(:last-of-type)::after {
+    display: none !important;
+}
+.home.posts .summary .featured-image-preview img {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+// .home.posts .summary .featured-image-preview img:hover{
+//   transform: scale(1.02);
+//   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+// }
+// @media (min-width: 768px) {
+//     .home.posts .summary .featured-image-preview {
+//         height: 260px;
+//     }
+// }
+@media (min-width: 1280px) {
+    .home.posts .summary .featured-image-preview {
+        width: 85%;
+    }
+}
+
+// 内容网格化
+.fi-container {
+    background-image:
+        linear-gradient(90deg, rgba(60, 10, 30, 0.05) 3%, transparent 0),
+        linear-gradient(1turn, rgba(60, 10, 30, 0.05) 3%, transparent 0);
+    background-size: 20px 20px;
+    background-position: center;
+
+    [data-theme="dark"] & {
+        background-image:
+            linear-gradient(90deg, rgba(195, 245, 215, 0.05) 3%, transparent 0),
+            linear-gradient(1turn, rgba(195, 245, 215, 0.05) 3%, transparent 0);
+    }
+
+    // Content adapter generated posts style
+    &[data-adapters="projects"] {
+        .single-subtitle {
+            font-size: 1rem;
+        }
+    }
+}
+
+// home 网格化
+.container:has(.home) {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: MAX(100vh, 400px);
+        background-image:
+            linear-gradient(90deg, rgba(60, 10, 30, 0.04) 1px, transparent 0),
+            linear-gradient(1turn, rgba(60, 10, 30, 0.04) 1px, transparent 0);
+        background-size: 40px 40px;
+        background-position: center;
+        border-bottom: 1px solid rgba(60, 10, 30, 0.04);
+
+        [data-theme="dark"] & {
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(195, 245, 215, 0.04) 1px,
+                    transparent 0
+                ),
+                linear-gradient(
+                    1turn,
+                    rgba(195, 245, 215, 0.04) 1px,
+                    transparent 0
+                );
+            border-bottom-color: rgba(195, 245, 215, 0.04);
+        }
+    }
+}
+
+// hack valine comment
+#valine {
+    max-height: 500px;
+    overflow-y: scroll;
+
+    .vcount {
+        position: sticky;
+        top: 0;
+        cursor: pointer;
+        text-align: right;
+        font-size: 1rem;
+        background-color: $global-background-color;
+
+        [data-theme="dark"] & {
+            background-color: $global-background-color-dark;
+        }
+
+        &::after {
+            content: "来自 Valine";
+            margin-left: 0.5rem;
+            font-size: 50%;
+            @extend .text-secondary;
+        }
+    }
+
+    .vpanel,
+    .vempty,
+    .vat,
+    .vpower {
+        display: none !important;
+    }
+}
+
+// flyfish
+#flyfish {
+    position: fixed !important;
+    z-index: 99 !important;
+}

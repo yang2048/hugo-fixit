@@ -2,55 +2,100 @@
 # Menu Configuration
 # See: https://fixit.lruihao.cn/documentation/basics/#menu-configuration
 # -------------------------------------------------------------------------------------
-
 [[main]]
-identifier = "archives"
-parent = ""
-# you can add extra information before the name (HTML format is supported), such as icons
-pre = ""
-# you can add extra information after the name (HTML format is supported), such as icons
-post = ""
-name = "Archives"
-url = "/archives/"
-# title will be shown when you hover on this menu link
-title = ""
-weight = 1
-
-# FixIt 0.2.14 | NEW add user-defined content to menu items
-[main.params]
-# add css class to a specific menu item
-class = ""
-# whether set as a draft menu item whose function is similar to a draft post/page
-draft = false
-# FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
-icon = "fa-solid fa-archive"
-# FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
-type = ""
-# FixIt 0.3.9 | NEW whether to show the submenu item divider line
-divided = false
-
+  identifier = "home"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "主页"
+  url = "/home/"
+  title = ""
+  weight = 1
+  [main.params]
+    icon = "fa-solid fa-home"
 [[main]]
-identifier = "categories"
-parent = ""
-pre = ""
-post = ""
-name = "Categories"
-url = "/categories/"
-title = ""
-weight = 2
-
-[main.params]
-icon = "fa-solid fa-folder-tree"
-
+  identifier = "archives"
+  parent = ""
+  # you can add extra information before the name (HTML format is supported), such as icons
+  pre = ""
+  # you can add extra information after the name (HTML format is supported), such as icons
+  post = ""
+  name = "归档"
+  url = "/archives/"
+  # title will be shown when you hover on this menu link
+  title = ""
+  weight = 2
+  # FixIt 0.2.14 | NEW add user-defined content to menu items
+  [main.params]
+    # add css class to a specific menu item
+    class = ""
+    # whether set as a draft menu item whose function is similar to a draft post/page
+    draft = false
+    # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
+    icon = "fa-solid fa-archive"
+    # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
+    type = ""
 [[main]]
-identifier = "tags"
-parent = ""
-pre = ""
-post = ""
-name = "Tags"
-url = "/tags/"
-title = ""
-weight = 3
-
-[main.params]
-icon = "fa-solid fa-tags"
+  identifier = "categories"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "分类"
+  url = "/categories/"
+  title = ""
+  weight = 3
+  [main.params]
+    icon = "fa-solid fa-folder-tree"
+[[main]]
+  identifier = "tags"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "标签"
+  url = "/tags/"
+  title = ""
+  weight = 4
+  [main.params]
+    icon = "fa-solid fa-tags"
+[[main]]
+  identifier = "projects"
+  parent = ""
+  pre = ""
+  post = ""
+  name = "我的作品"
+  url = "/projects/"
+  title = ""
+  weight = 5
+  [main.params]
+    icon = "fa-solid fa-laptop-code"
+[[main]]
+  identifier = "diy"
+  pre = ""
+  post = ""
+  name = "实验室"
+  url = "/diy/"
+  title = ""
+  weight = 6
+  [main.params]
+    icon = "fa-solid fa-flask"
+[[main]]
+  identifier = "navigate"
+  parent = "diy"
+  pre = ""
+  post = ""
+  name = "导航"
+  url = "https://xdev.cc/"
+  title = ""
+  weight = 1
+  [main.params]
+    icon = "fa-solid fa-compass"
+[[main]]
+  identifier = "about"
+  pre = ""
+  post = ""
+  name = "关于"
+  url = "/about/"
+  title = ""
+  weight = 9
+  [main.params]
+    icon = "fa-solid fa-user-tie"

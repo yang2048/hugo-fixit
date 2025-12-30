@@ -1,11 +1,11 @@
 # -------------------------------------------------------------------------------------
-# Markup Configuration
-# See: https://gohugo.io/configuration/markup/
+# Hugo 的标记语言相关配置
+# 参见: https://gohugo.io/getting-started/configuration-markup/
 # -------------------------------------------------------------------------------------
 
 _merge = "shallow"
 
-# Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+# 语法高亮 (https://gohugo.io/content-management/syntax-highlighting)
 [highlight]
 # ~~~~~~~~~~ necessary configurations ~~~~~~~~~~
 # https://github.com/hugo-fixit/FixIt/issues/43
@@ -17,8 +17,7 @@ guessSyntax = true
 lineNos = true
 lineNumbersInTable = true
 
-# Goldmark is from Hugo 0.60 the default library used for Markdown
-# See: https://gohugo.io/configuration/markup/#goldmark
+# Goldmark 是从 Hugo 0.60 开始默认使用的 Markdown 库
 [goldmark]
 duplicateResourceFiles = false
 

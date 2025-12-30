@@ -1,26 +1,27 @@
-description = "This is my new Hugo FixIt site"
-keywords = ["Hugo", "FixIt"]
+# -------------------------------------------------------------------------------------
+# Theme Core Configuration
+# See: https://fixit.lruihao.cn/theme-documentation-basics/#site-configuration
+# -------------------------------------------------------------------------------------
 
-[author]
-name = "Lruihao"
-email = ""
-link = "https://github.com/Lruihao"
-avatar = "https://lruihao.cn/images/avatar.jpg"
+# FixIt 0.2.15 | NEW Developer options
+# Select the scope named `public_repo` to generate personal access token,
+# Configure with environment variable `HUGO_PARAMS_GHTOKEN=xxx`, see https://gohugo.io/functions/os/getenv/#examples
+[dev]
+  enable = false
+  # Check for updates
+  c4u = false
 
-[app]
-title = "Hugo FixIt Blog"
+# -------------------------------------------------------------------------------------
+# Theme Components Configuration
+# -------------------------------------------------------------------------------------
 
-[header]
+# Mobile Devtools confi
+[mDevtools]
+  enable = true
+  # "eruda", "vConsole" supported
+  type = "eruda"
 
-[header.title]
-logo = "/images/fixit.min.svg"
-
-[home]
-
-[home.profile]
-enable = true
-
-[customPartials]
-head = [
-  "inject/fixit-docs-bookmark.html",
-]
+# Content adapters config for component projects
+# https://github.com/hugo-fixit/component-projects
+[projectsAdapters]
+  enable = false

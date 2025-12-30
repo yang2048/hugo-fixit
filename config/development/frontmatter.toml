@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------------------
-# Hugo Configuration
-# See: https://gohugo.io/getting-started/configuration/
+# Front Matter Configuration
+# See: https://gohugo.io/getting-started/configuration/#configure-front-matter
 # -------------------------------------------------------------------------------------
 
-baseURL = "https://yyovo.com/"
+lastmod = ["lastmod", ":fileModTime", ":git", ":defalut"]

@@ -3,8 +3,19 @@
 # See: https://gohugo.io/configuration/privacy/
 # -------------------------------------------------------------------------------------
 
+[googleAnalytics]
+  disable = false
+  respectDoNotTrack = true
+
+[instagram]
+  disable = false
+  simple = false
+
 [x]
-enableDNT = true
+  disable = false
+  enableDNT = false
+  simple = false
 
 [youtube]
-privacyEnhanced = true
+  disable = false
+  privacyEnhanced = false

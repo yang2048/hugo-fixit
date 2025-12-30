@@ -1,4 +1,38 @@
 // ==============================
 // Override Variables
 // 覆盖变量
+// https://github.com/hugo-fixit/FixIt/blob/main/assets/css/_variables.scss
 // ==============================
+// https://fonts.zeoseven.com/
+@import url("https://static.zeoseven.com/zsft/447/main/result.css");
+$code-font-family:
+    Cascadia Code,
+    $code-font-family;
+
+@import url("https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css");
+$global-font-family: "LXGW Bright", $global-font-family;
+$global-font-size: 17px;
+
+@import url("https://static.zeoseven.com/zsft/253/main/result.css");
+$header-title-font-family: JasonHandwriting1, system-ui;
+// $header-title-font-size: 字体大小
+// $header-title-font-height: 行高
+
+// Color of the background
+$global-background-color: #f8fafc;
+$global-background-color-dark: #0f172a;
+
+// Color of the text
+$global-font-color: #161209;
+$global-font-color-dark: #f1f1f1;
+$code-color: #24292f;
+$code-color-dark: #ededed;
+$global-link-color: #161209;
+$global-link-color-dark: #dbdbdb;
+$global-link-hover-color: #0050ff;
+$single-link-hover-color-dark: #fff;
+$global-font-secondary-color: #7d7d7d;
+$global-font-secondary-color-dark: #a8a8a8;
+
+// 背景 #0f172a  #f8fafc
+// 前景 #1e293b  #ffffff

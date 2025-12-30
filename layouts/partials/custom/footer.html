@@ -1,0 +1,86 @@
+<script>
+    function loadScript({
+        url,
+        delay,
+        onloadCallback,
+        async,
+        preloadCallback,
+        attributes = {},
+    }) {
+        function load() {
+            if (preloadCallback) preloadCallback();
+
+            const script = document.createElement("script");
+            script.src = url;
+            script.async = async;
+
+            // Set attributes
+            Object.entries(attributes).forEach(([key, value]) => {
+                script.setAttribute(key, value);
+            });
+
+            if (onloadCallback) script.onload = onloadCallback;
+
+            document.body.appendChild(script);
+        }
+
+        if (typeof delay !== "undefined") {
+            setTimeout(load, delay);
+        } else {
+            load();
+        }
+    }
+    // swup head plugin
+    loadScript({
+        url: "https://unpkg.com/@swup/head-plugin@2",
+        async: false,
+        delay: 200,
+        onloadCallback: function () {
+            console.log("swup head plugin loaded");
+        },
+    })
+
+    // swup preload plugin
+    loadScript({
+        url: "https://unpkg.com/@swup/preload-plugin@3",
+        async: false,
+        delay: 200,
+        onloadCallback: function () {
+            console.log("swup preload plugin loaded")
+        }
+    })
+
+    // swup progress bar plugin
+    loadScript({
+        url: "https://unpkg.com/@swup/progress-plugin@3",
+        async: false,
+        delay: 200,
+        onloadCallback: function () {
+            console.log("swup progress bar plugin loaded")
+        }
+    })
+
+    // swup
+    loadScript({
+        url: "https://unpkg.com/swup@4",
+        async: false,
+        delay: 200,
+        onloadCallback: function () {
+            const swup = new Swup({
+                containers: ["body"],
+                plugins: [
+                    new SwupHeadPlugin(),
+                    new SwupPreloadPlugin({ preloadVisibleLinks: true }),
+                    new SwupProgressPlugin(),
+                ],
+                animationSelector: false,
+            });
+            console.log("swup loaded");
+
+            swup.hooks.on("page:view", () => {
+                // Load comment services
+
+            })
+        }
+    })
+</script>

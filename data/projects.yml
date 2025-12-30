@@ -1,0 +1,8 @@
+- title: 我开发的
+  description: 下面这些是我开发过的一些开源作品。
+  order: desc
+  orderby: star
+  totalStars: true
+  contentAdapters: false
+  repos:
+    - yang2048/hugo-fixit

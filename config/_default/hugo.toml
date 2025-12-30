@@ -3,29 +3,52 @@
 # See: https://gohugo.io/configuration/all/
 # -------------------------------------------------------------------------------------
 
-# website title
-title = ""
-# Hostname (and path) to the root
+title = "异空间"
 baseURL = "http://localhost:1313"
-# theme list
-# theme = ["FixIt"] # enable in your site config file
-# determines default content language ["en", "zh-cn", "fr", "pl", ...]
-defaultContentLanguage = "en"
-# language code ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "en"
-# language name ["English", "简体中文", "Français", "Polski", ...]
-languageName = "English"
+contentDir = "notePad"
+assetDir = "assets"
+archetypeDir = "archetypes"
+# theme = "FixIt"
+ignoreFiles = ['notePad/archetypes',  'notePad/private']
+
+defaultContentLanguage = "zh-cn"
+disableLanguages = ["en", "zh-tw"]
 # whether to include Chinese/Japanese/Korean
-hasCJKLanguage = false
-# copyright description used only for seo schema
-copyright = ""
-# whether to use robots.txt
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 是否使用 robots.txt
 enableRobotsTXT = true
 # whether to use git commit log
+# 是否使用 git 信息
 enableGitInfo = true
 # whether to use emoji code
+# 是否使用 emoji 代码
 enableEmoji = true
 # the main sections of a site
 # if set, the MainSections method on the Site object returns the given sections,
 # otherwise it returns the section with the most pages.
 # mainSections = ["posts"]
+# relativeURLs = false
+buildDrafts = false
+summaryLength = 150
+titleCaseStyle = "ap"
+capitalizeListTitles = false
+timeZone = "Asia/Shanghai"
+# the editor to use when creating new content
+# 创建新内容时使用的编辑器
+newContentEditor = "code"
+
+# default amount of posts in each pages
+# 默认每页列表显示的文章数目
+# TODO deprecated: site config key paginate was deprecated in Hugo v0.128.0 and will be removed in a future release. Use pagination.pagerSize instead. 
+# paginate = 12
+
+# ignore some build errors
+ignoreLogs = [
+  "error-get-remote-image",
+  "error-get-remote-json",
+  "error-get-gh-repo",
+  "error-remote-getjson",
+  "error-missing-instagram-accesstoken",
+  "warning-dev-version"
+]
