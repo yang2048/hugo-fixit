@@ -622,7 +622,7 @@ editable = true
   enable = true
   expandDepth = 1
   copyable = true
-  sort = false
+  sort = true
   boxed = true
 
 # FixIt 0.3.12 | 新增 自定义部分配置
@@ -630,16 +630,13 @@ editable = true
 # 依赖于开放的自定义块 https://fixit.lruihao.cn/references/blocks/
 [customPartials]
   head = [
-    # "custom/use-assets.html",
-    # "inject/shortcode-caniuse.html",
-    # "inject/cmpt-mdevtools.html",
-    # "inject/cmpt-translate.html",
     "inject/component-projects.html",
     "inject/shortcode-rewards.html",
     "custom/loading.html",
   ]
   menuDesktop = [
     "inject/translate-menu-desktop.html",
+    "inject/cmpt-flyfish.html",
   ]
   menuMobile = [
     "inject/translate-menu-mobile.html",
@@ -660,7 +657,6 @@ editable = true
   assets = [
     "custom/use-assets.html",
     "inject/shortcode-caniuse.html",
-    "inject/cmpt-flyfish.html",
     # "inject/cmpt-mdevtools.html",
     "inject/cmpt-translate.html",
     "custom/footer.html",

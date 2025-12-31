@@ -1,86 +1,76 @@
+<script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
+<!-- <link rel="preload" href="https://unpkg.com/swup@4" as="script"/>
+<link rel="preload" href="https://unpkg.com/@swup/head-plugin@2" as="script"/>
+<link rel="preload" href="https://unpkg.com/@swup/preload-plugin@3" as="script"/> -->
 <script>
-    function loadScript({
-        url,
-        delay,
-        onloadCallback,
-        async,
-        preloadCallback,
-        attributes = {},
-    }) {
-        function load() {
-            if (preloadCallback) preloadCallback();
+function initCustomALinks(){let t=function(e){const t=["https://geekswg","http://geekswg","https://github.com","https://gavinblog","https://cdn","https://jsd","javascript:","https://gavinwells","http://127.0.0.1","http://localhost","https://www.douyin.","tencent://","mailto:"],n=["geekswg","51.la","342901.xyz"];return t.some(t=>e.startsWith(t))||n.some(t=>e.includes(t))},n=function(){document.querySelectorAll("a[href]").forEach(e=>{if(nextUrl=e.href,t(nextUrl)||nextUrl==="")return;e.addEventListener("click",t=>{console.log(3)})})};n();var e=window.location.href;e.startsWith("http://127.0.0.1")||e.startsWith("http://localhost")}document.addEventListener("DOMContentLoaded",function(){initPjaxFilterLink()});var pjax=new Pjax({selectors:["main","head title","meta[name=keywords]"],hooks:{document:function(e){configReload(e),loadDiffResource(window.document,e)}}});function configReload(e){e.querySelectorAll("script").forEach(e=>{!e.src&&e.textContent.indexOf("window.config")==0&&(new Function(e.textContent)(),fixit.config=window.config)})}function loadDiffResource(e,t){current={stylesheets:Array.from(e.querySelectorAll('.widgets ~ [rel="stylesheet"]')).map(e=>e.href),scripts:Array.from(e.querySelectorAll(".widgets ~ script[src]")).map(e=>e.src)},next={stylesheets:Array.from(t.querySelectorAll('.widgets ~ link[rel="stylesheet"]')).map(e=>e.href),scripts:Array.from(t.querySelectorAll(".widgets ~ script[src]")).map(e=>e.src)},diffStylesheets=next.stylesheets.filter(e=>!current.stylesheets.includes(e)),diffScripts=next.scripts.filter(e=>!current.scripts.includes(e)),console.clear(),console.log("======== pjax增量加载 ========"),console.table(diffStylesheets),console.table(diffScripts),diffStylesheets.forEach(e=>{const t=document.createElement("link");t.rel="stylesheet",t.href=e,document.body.appendChild(t)}),diffScripts.forEach(e=>{const t=document.createElement("script");t.src=e,document.body.appendChild(t)})}function initPjaxFilterLink(){document.querySelectorAll("a").forEach(e=>{e.addEventListener("click",t=>{var s,n=e.href;if(console.info(n),s=/funs|notepad|friends|dlogs/,console.info(pjaxUrlFilter(n,s)),pjaxUrlFilter(n,s))return t.preventDefault(),window.open(n),!1})})}function pjaxUrlFilter(e,t){return t.test(e)}document.addEventListener("pjax:send",function(){console.log("pjax:send")}),document.addEventListener("pjax:complete",function(){initPjaxFilterLink(),console.log("pjax:complete"),pjax_reload()});function pjax_reload(){pajx_fixit_reload();try{let e=document.getElementsByClassName("la-widget la-data-widget__container");e.length>0&&(e[0].style="background:transparent")}catch(e){console.log(e)}}function pajx_fixit_reload(){try{document.querySelector(".view-comments").classList.add("d-none")}catch(e){console.log(e)}try{initCustomALinks(),translate.execute()}catch(e){console.log(e)}try{fixit.initToc(),fixit.initTocListener(),fixit.initDetails()}catch(e){console.log(e)}try{fixit.config.encryption&&window.fixit.initFixItDecryptor()}catch(e){console.log(e)}try{fixit.initCodeWrapper()}catch(e){console.log(e)}try{document.querySelector("div#comments")&&fixit.initComment()}catch{}pjax_reload_lightGallery(),pjax_js_reload("https://vercount.one/js")}function pjax_reload_lightGallery(){try{lightGallery(document.getElementById("content"),{plugins:[lgThumbnail,lgZoom],selector:".lightgallery",speed:400,hideBarsDelay:2e3,allowMediaOverlap:!0,exThumbImage:"data-thumbnail",toggleThumb:!0,thumbWidth:80,thumbHeight:"60px",actualSize:!1,showZoomInOutIcons:!0,licenseKey:"none"})}catch(e){console.log(e)}}function pjax_js_reload(e){var n,s=document.createElement("script"),o=window.location.protocol.split(":")[0];s.src=e,n=document.getElementsByTagName("script")[0],n.parentNode.insertBefore(s,n)}function loadResource(e,t){return new Promise((n,s)=>{let o;t==="css"?(o=document.createElement("link"),o.rel="stylesheet",o.href=e):t==="js"&&(o=document.createElement("script"),o.src=e),o&&(o.onload=()=>n(e),o.onerror=()=>s(e),document.head.appendChild(o))})}console.warn=function(){};
+    
+    // function loadScript({
+    //     url,
+    //     delay,
+    //     onloadCallback,
+    //     async,
+    //     preloadCallback,
+    //     attributes = {},
+    // }) {
+    //     function load() {
+    //         if (preloadCallback) preloadCallback();
 
-            const script = document.createElement("script");
-            script.src = url;
-            script.async = async;
+    //         const script = document.createElement("script");
+    //         script.src = url;
+    //         script.async = async;
 
-            // Set attributes
-            Object.entries(attributes).forEach(([key, value]) => {
-                script.setAttribute(key, value);
-            });
+    //         // Set attributes
+    //         Object.entries(attributes).forEach(([key, value]) => {
+    //             script.setAttribute(key, value);
+    //         });
 
-            if (onloadCallback) script.onload = onloadCallback;
+    //         if (onloadCallback) script.onload = onloadCallback;
 
-            document.body.appendChild(script);
-        }
+    //         document.body.appendChild(script);
+    //     }
 
-        if (typeof delay !== "undefined") {
-            setTimeout(load, delay);
-        } else {
-            load();
-        }
-    }
-    // swup head plugin
-    loadScript({
-        url: "https://unpkg.com/@swup/head-plugin@2",
-        async: false,
-        delay: 200,
-        onloadCallback: function () {
-            console.log("swup head plugin loaded");
-        },
-    })
+    //     if (typeof delay !== "undefined") {
+    //         setTimeout(load, delay);
+    //     } else {
+    //         load();
+    //     }
+    // }
+    // // swup head plugin
+    // loadScript({
+    //     url: "https://unpkg.com/@swup/head-plugin@2",
+    //     async: false,
+    //     delay: 200,
+    // })
 
-    // swup preload plugin
-    loadScript({
-        url: "https://unpkg.com/@swup/preload-plugin@3",
-        async: false,
-        delay: 200,
-        onloadCallback: function () {
-            console.log("swup preload plugin loaded")
-        }
-    })
+    // // swup preload plugin
+    // loadScript({
+    //     url: "https://unpkg.com/@swup/preload-plugin@3",
+    //     async: false,
+    //     delay: 200,
+    // })
 
-    // swup progress bar plugin
-    loadScript({
-        url: "https://unpkg.com/@swup/progress-plugin@3",
-        async: false,
-        delay: 200,
-        onloadCallback: function () {
-            console.log("swup progress bar plugin loaded")
-        }
-    })
+    // // swup
+    // loadScript({
+    //     url: "https://unpkg.com/swup@4",
+    //     async: false,
+    //     delay: 200,
+    //     onloadCallback: function () {
+    //         const swup = new Swup({
+    //             containers: ["main .fi-container"],
+    //             linkSelector: 'a[href]',
+    //             linkToSelf: 'scroll',
+    //             plugins: [
+    //                 new SwupHeadPlugin(),
+    //                 new SwupPreloadPlugin({ preloadVisibleLinks: true }),
+    //             ],
+    //         });
+    //         console.log("swup loaded1");
 
-    // swup
-    loadScript({
-        url: "https://unpkg.com/swup@4",
-        async: false,
-        delay: 200,
-        onloadCallback: function () {
-            const swup = new Swup({
-                containers: ["body"],
-                plugins: [
-                    new SwupHeadPlugin(),
-                    new SwupPreloadPlugin({ preloadVisibleLinks: true }),
-                    new SwupProgressPlugin(),
-                ],
-                animationSelector: false,
-            });
-            console.log("swup loaded");
+    //         swup.hooks.on("page:view", () => {
+    //             // Load comment services
+    //         })
+    //     }
+    // })
 
-            swup.hooks.on("page:view", () => {
-                // Load comment services
-
-            })
-        }
-    })
 </script>
