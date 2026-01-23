@@ -4,5 +4,10 @@
 # -------------------------------------------------------------------------------------
 
 # posts = ":year/:month/:filename"
-posts = "posts/:year:month/:slugorcontentbasename"
-private = ":sections[1:]/:slugorcontentbasename"
+# posts = "posts/:year:month/:slugorcontentbasename"
+# private = ":sections[1:]/:slugorcontentbasename"
+
+[page]
+  posts = '/posts/:year:month/:slugorcontentbasename'
+[section]
+  posts = '/posts/'
